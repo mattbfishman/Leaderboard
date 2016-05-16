@@ -5,13 +5,17 @@
 </head>
 
 <body>
+  
   <div class="outer">
     {{> loginButtons}}
     <div class="logo"></div>
     <h1 class="title">Leaderboard</h1>
     <div class="subtitle">Select a scientist to change their score or remove them from play</div>
-
+    {{#if currentUser}}
     {{> leaderboard}}
+    {{else}}
+      <h1>Log In</h1>
+    {{/if}}
   </div>
 </body>
 
